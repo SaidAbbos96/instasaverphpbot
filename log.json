@@ -1,0 +1,23 @@
+{
+    "update_id": 620342201,
+    "message": {
+        "message_id": 260,
+        "from": {
+            "id": 954393349,
+            "is_bot": false,
+            "first_name": "Mustafo",
+            "last_name": "\ud83d\ude37\ud83d\ude37\ud83d\ude37",
+            "username": "Mustafo_jurayev",
+            "language_code": "ru"
+        },
+        "chat": {
+            "id": 954393349,
+            "first_name": "Mustafo",
+            "last_name": "\ud83d\ude37\ud83d\ude37\ud83d\ude37",
+            "username": "Mustafo_jurayev",
+            "type": "private"
+        },
+        "date": 1621014645,
+        "text": "5"
+    }
+}
