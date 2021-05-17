@@ -47,16 +47,21 @@ if($chat_type == "private"){
     }else if(mb_stripos($text, "/p/") !== false){
         $data = get_data($api_url.''.$text)['result'];
         if($data['__typename'] == "GraphVideo"){
-            bot('sendPhoto', [
+            // bot('sendPhoto', [
+            //     'chat_id' => $chat_id,
+            //     'photo' => $data['display_resources'][2]['src'],
+            //     'caption' => "Marhamat video tayyor 👇",
+            //     'parse_mode' => 'HTML',
+            //     'reply_markup' => json_encode([
+            //         'inline_keyboard' => [
+            //             [['text'=> "Yuklash 📥", 'url' => $data['video_url']]]
+            //         ]
+            //     ])
+            // ]);
+            bot('sendmessage', [
                 'chat_id' => $chat_id,
-                'photo' => $data['display_resources'][2]['src'],
-                'caption' => "Marhamat video tayyor 👇",
-                'parse_mode' => 'HTML',
-                'reply_markup' => json_encode([
-                    'inline_keyboard' => [
-                        [['text'=> "Yuklash 📥", 'url' => $data['video_url']]]
-                    ]
-                ])
+                'text' => 'Marhamat video tayyor 👇\n <a href="'.$data['video_url'].'">video</a>',
+                'parse_mode' => 'HTML'            
             ]);
         }else if($data['__typename'] == "GraphImage"){
                 bot('sendPhoto', [
